@@ -31,9 +31,13 @@ resource "aws_instance" "web" {
   ami           = "ami-05d2d839d4f73aafb"
   instance_type = "t2.micro"
 
-  key_name = "devops-lab"   
+  key_name = "mypc"   
   security_groups = [aws_security_group.web_sg.name]
 
   user_data = file("config.sh")
+
+  tags = {
+    Name = "my-web-server"
+  }
 
 }
