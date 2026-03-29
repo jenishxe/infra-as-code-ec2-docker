@@ -28,7 +28,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0ec10929233384c7f"
+  ami           = "ami-05d2d839d4f73aafb"
   instance_type = "t2.micro"
 
   key_name = "devops-lab"   
